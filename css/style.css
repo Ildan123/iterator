@@ -1,0 +1,113 @@
+@font-face {
+   font-family: Inter;
+   src: url(../fonts/Inter-Regular.ttf);
+   font-weight: 400;
+}
+
+@font-face {
+   font-family: Inter;
+   src: url(../fonts/Inter-Medium.ttf);
+   font-weight: 600;
+}
+
+@font-face {
+   font-family: Inter;
+   src: url(../fonts/Inter-Bold.ttf);
+   font-weight: 900;
+}
+
+:root{
+   --color-button: #99BCFF;
+   --color-button-active: #2788FF;
+}
+
+* {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+   font-family: Inter;
+}
+
+/* css для кнопок */
+
+.buttons span{
+   background-color: var(--color-button);
+   padding: 10px 20px;
+   cursor: pointer;
+   text-align:center;
+}
+
+.buttons span:hover, .buttons span.active{
+   background-color: var(--color-button-active);
+   color: white;
+}
+
+
+section.tabs{
+   padding: 60px 10vw;
+   display: grid;
+   row-gap: 20px;
+}
+
+.buttons {
+   display: grid;
+   grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+   gap: 10px;
+}
+
+section.tabs div.line{
+   background-color: #7FB9FF;
+   height: 2px;
+}
+
+section.tabs div.content{
+   display: none;
+}
+
+section.tabs div.content.active{
+   display: grid;
+   row-gap: 10px;
+}
+section.slider{
+   padding: 60px 10vw;
+   display: grid;
+   grid-template-rows: 50vw 1fr;
+   row-gap: 3vw;
+}
+section.slider img.active{
+   display: block;
+   width: 100%;
+   height: 100%;
+   object-fit: cover;
+}
+section.slider img{
+   display: none;
+}
+section.slider div.btns{
+   display: grid;
+   grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
+   gap: 10px;
+}
+section.slider div.btns span{
+   background-color: var(--color-button);
+   text-align: center;
+   padding: 10px 0;
+   cursor: pointer;
+}
+section.slider div.btns span.active, section.slider div.btns span:hover{
+   background-color: var(--color-button-active);
+   color: white;
+}
+section.iterator{
+   height: 100%;
+   width: 100%;
+}
+section.iterator span{
+   width: 40px;
+   height: 40px;
+}
+section.iterator button#left, section.iterator button#right{
+   width: 40px;
+   height: 40px;
+}
+ 
